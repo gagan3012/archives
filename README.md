@@ -189,7 +189,7 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 
 input_text = [tokenizer.apply_chat_template(messages)]
 
-llm = LLM(model="facebook/opt-125m")
+llm = LLM(model=MODEL_ID)
 
 output = llm.generate(input_text,sampling_params)
 
