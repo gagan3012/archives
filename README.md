@@ -1,6 +1,8 @@
 # ArchivesRAG
 
-Here I will be explaining step by step the training of ArchivesRAG, an embedding model specific for the Archives Domain. 
+Here I will be explaining step by step the training of ArchivesRAG, an embedding model specific for the Archives Domain.
+
+To play with the model visit the following [Space](https://huggingface.co/spaces/gagan3012/ArchiveRAG)
 
 ## Query generation
 
