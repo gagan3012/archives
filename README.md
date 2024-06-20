@@ -4,7 +4,7 @@ Here I will be explaining step by step the training of ArchivesRAG, an embedding
 
 ## Query generation
 
-The first step is to generate the queries that will be used to train the model. The queries are generated using the [GPT-4o](https://chatgpt.com/?model=gpt-4o) model, which is a variant of the GPT-4 model fine-tuned on the OpenAI GPT-4 model. The queries are generated using the following prompt:
+The first step is to generate the queries that will be used to train the model. The queries are generated using the [GPT-4o](https://chatgpt.com/?model=gpt-4o) model, which is a variant of the GPT-4 model. The queries are generated using the following prompt:
 
 ```markdown
 You are a smart and helpful assistant.
