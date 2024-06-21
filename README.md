@@ -67,14 +67,39 @@ and random sample negatives from the top-k documents (not including the positive
 - `candidate_pool`: The pool to retrieval. The default value is None, and this script will retrieve from the combination of all `neg` in `input_file`.
 - `use_gpu_for_searching`: whether to use faiss-gpu to retrieve negatives.
 
+Original Data:
+```json
+{
+    "query": "What is the InterPARES Trust project about?",
+    "positive": [
+        "InterPARES Trust is an international research project funded by the Social Sciences and Humanities Research Council of Canada."
+    ]
+}
+```
+Mined Hard Negative Data:
+```json
+{
+    "query": "What is the InterPARES Trust project about?",
+    "positive": [
+        "InterPARES Trust is an international research project funded by the Social Sciences and Humanities Research Council of Canada."
+    ],
+    "negative": [
+        "InterPARES Trust is a small local initiative with no international involvement or collaboration.",
+        "The project is solely focused on historical paper records, with no interest in digital data or internet-related issues.",
+        "InterPARES Trust is a for-profit organization rather than a research project.",
+        "The project has no connection to any academic or governmental bodies.",
+        "InterPARES Trust is primarily concerned with physical archival storage solutions.",
+        "The project operates independently without any partnerships or collaborations.",
+        "InterPARES Trust does not engage in any research or investigation activities."
+    ]
+}
+```
 
 ## Training
 
 To train the model we use the following command:
 
 ```
-number_of_gpus=1
-
 torchrun --nproc_per_node 1 \
 run.py \
 --output_dir archivesrag \
